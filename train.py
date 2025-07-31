@@ -9,5 +9,6 @@ X, y = df.iloc[:,:-1],df.iloc[:,-1]
 
 model = RandomForestClassifier()
 model.fit(X, y)
+print("i adjfkshdfsd")
 
-joblib.dump(model, 'models/iris_model.pkl')
+joblib.dump(model, './models/iris_model.pkl')
