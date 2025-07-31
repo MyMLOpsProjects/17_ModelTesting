@@ -1,2 +1,2 @@
 # 17_ModelTesting
-17_ModelTesting
+This project is to test basic CI functionality.
