@@ -42,6 +42,3 @@ def test_model_quality():
     # Fail the test if any checks failed
     # Using is_passed() is a more direct way to check the suite's overall status
     assert result.passed, "Deepchecks suite failed. Check deepchecks_report.html for details."
-
-# Run the test
-test_model_quality()
