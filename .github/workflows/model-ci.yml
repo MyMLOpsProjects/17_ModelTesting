@@ -34,3 +34,8 @@ jobs:
           name: trained-model
           path: models/iris_model.pkl
 
+      - name: Upload deepcheck report to GitHub Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: deepcheck-report
+          path: tests/deepchecks_report.html
