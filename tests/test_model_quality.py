@@ -37,7 +37,7 @@ def test_model_quality():
     # --- FIX ENDS HERE ---
 
     # Save the report
-    result.save_as_html('deepchecks_report.html',as_widget=False)
+    result.save_as_html('./tests/deepchecks_report.html',as_widget=False)
 
     # Fail the test if any checks failed
     # Using is_passed() is a more direct way to check the suite's overall status
