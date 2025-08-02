@@ -2,4 +2,5 @@ pandas
 scikit-learn
 joblib
 pytest
-deepchecks
+numpy==1.24.4
+deepchecks==0.19.1
