@@ -26,6 +26,12 @@ jobs:
         cd app
         pip install -r requirements.txt
 
+    - name: Download Model Artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: iris-model
+        path: models/
+  
     - name: Start Uvicorn (Dev Only — for demo/testing)
       run: |
         cd app
