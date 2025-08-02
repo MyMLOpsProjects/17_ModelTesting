@@ -2,6 +2,8 @@ import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
 import joblib
+import numpy as np
+np.Inf = np.inf
 
 iris = "./data/iris.csv"
 df = pd.read_csv(iris)
