@@ -1,0 +1,32 @@
+name: Model Deployment (CD)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'models/**'
+      - 'app/**'
+      - '.github/workflows/model_cd.yml'
+
+jobs:
+  deploy-model-api:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        cd app
+        pip install -r requirements.txt
+
+    - name: Start Uvicorn (Dev Only — for demo/testing)
+      run: |
+        cd app
+        nohup uvicorn main:app --host 0.0.0.0 --port 8000 &
